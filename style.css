@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+}
+:root {
+    --success-color: #44ce44;
+      --success1-color: #11a611;
+      --blue-color: #4141bdca;
+      --blue1-color: #13316bf4;
+      --primary-color: #0f3483;
+      --danger-color: #e90909;
+      --pink-color: #d71784;
+      --light-color:#ffffff;
+      --gray-color:#808080;
+      --light1-color:#808080;
+
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, var(--blue-color), var(--blue1-color));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+header #toggler {
+    display: none;
+}
+
+header .fa-house {
+    border: .1rem solid var(--gray-color);
+    font-size: 1.5rem;
+    color: var(--light-color);
+    border-radius: .5rem;
+    padding: .4rem 1.4rem;
+    cursor: pointer;
+    display: none;
+}
+header .logo {
+    font-size: 1.3rem;
+    color: var(--light-color);
+    font-weight: bolder;
+}
+
+header .navbar a {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0 1.2rem;
+}
+
+header .navbar a button {
+    padding: 10px;
+    color: var(--light-color);
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, var(--success-color), var(--success1-color));
+
+}
+.container-fluid {
+    padding-top: 10%;
+    padding-left: 8%;
+     width: 100%;
+}
+
+.container {
+    border-radius: 12px;
+    width: 90%;
+    background: var(--light-color);
+    box-shadow: 0px 2px 20px var(--light1-color);
+}
+
+.table h4 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    color: var(--blue-color);
+}
+
+table {
+    padding-left: 3%;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    color: var(--gray-color);
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+
+
+
+.table table button {
+    padding: 10PX;
+    background: linear-gradient(to right, var(--blue-color), var(--blue1-color)) ;
+    border: none;
+    color: var(--light-color);
+    border-radius: 10px;
+}
+
+.table table i {
+    cursor: pointer;
+}
+
+.table table .fa-eye {
+    color: var(--success-color);
+    padding:8px;
+}
+
+.table table .fa-pen-to-square {
+    color: var(--pink-color);
+    padding:8px;
+}
+
+.table table .fa-download {
+    color: var(--danger-color);
+    padding:8px;
+}
+
+.table table .fa-trash {
+    color: var(--blue-color);
+    padding:8px;
+}
+@media (max-width:768px) {
+
+    header .fa-house {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, var(--blue-color), var(--blue1-color));
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1rem;
+        padding: 1rem;
+        display: block;
+    }
+
+    header .navbar a button {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .container-fluid {
+        padding-top: 18%;
+        width: 100%;
+        padding-left: 1%;
+        padding-bottom: 2%;
+    }
+    .container {
+        border-radius: 12px;
+        width: 95%;
+        background: var(--light-color);
+        box-shadow: 0px 2px 20px var(--light1-color);
+    }
+
+    th {
+        font-size: .7rem;
+    }
+
+    td {
+        font-size: .8rem;
+    }
+    td button{
+        font-size: .7rem;
+    }
+    td i{
+        font-size: .6rem;
+    }
+    .table table .fa-eye {
+        padding:6px;
+    }
+    
+    .table table .fa-pen-to-square {
+        padding:6px;
+    }
+    
+    .table table .fa-download {
+        padding:6px;
+    }
+    
+    .table table .fa-trash {
+        padding:7px;
+    }
+   
+}
